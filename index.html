@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>&lt;model-viewer&gt; example</title>
+    <title>&lt;model-viewer&gt; demo</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="demo-styles.css">
-    
-    <!-- The following libraries and polyfills are recommended to maximize browser support -->
-    <!-- NOTE: you must adjust the paths as appropriate for your project -->
     
     <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
@@ -18,34 +15,56 @@
 <body>
   <div id="card">
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
-    <model-viewer src="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/teles-test.glb?alt=media&token=73301cbe-78f6-4ed3-91c4-61407d19c8ce"
+  <!--  <model-viewer src="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/162a6be2-293d-4554-8610-6011a9f71fef_ChairExp.glb?alt=media&token=a81b3e33-355c-4da5-92a0-4a7c4d9eeda7"
                   ios-src="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/scene.usdz?alt=media&token=1743c314-941d-46d7-8cee-c266d1694e68"
                   poster="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/Teles.PNG?alt=media&token=1b05836d-b25c-456a-9b07-38f4ee75afd9"
-                  alt="A 3D model of Tooling"
-                  shadow-intensity="1"
+                  alt="Telescopic"
+                  shadow-intensity="1" 
                   camera-controls
-                  auto-rotate ar>
-    </model-viewer>
-    <section class="attribution">
+                  auto-rotate ar
+                  xr-environment>
+    </model-viewer>   -->
+    
+    <model-viewer bounds="tight" enable-pan src="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/teles-test.glb?alt=media&token=73301cbe-78f6-4ed3-91c4-61407d19c8ce" 
+                  ios-src="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/scene.usdz?alt=media&token=1743c314-941d-46d7-8cee-c266d1694e68"
+                  ar ar-modes="webxr scene-viewer quick-look" 
+                  camera-controls environment-image="neutral" 
+                  poster="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/Teles.PNG?alt=media&token=1b05836d-b25c-456a-9b07-38f4ee75afd9"
+                  shadow-intensity="1">
+
+</model-viewer>
+
+    
+ <!--   <model-viewer src="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/162a6be2-293d-4554-8610-6011a9f71fef_ChairExp.glb?alt=media&token=a81b3e33-355c-4da5-92a0-4a7c4d9eeda7" 
+                  ar ar-scale="fixed" camera-controls alt="A 3D model of tooling" 
+                  
+                  ios-src="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/bd698466-86cb-4ec2-94ae-6ea3517811d4(1).usdz?alt=media&token=60a42e90-6cea-443b-8211-87f9b7b7d4e5" xr-environment>
+                     
+    </model-viewer>   -->
+    
+  <!--  <section class="attribution">
       <span>
-        <h1>Tooling</h1>
-        <!--
-        <span>By <a href="https://poly.google.com/view/dLHpzNdygsg" target="_blank">Poly</a></span>  -->
+        <h1>Astronaut</h1>
+        <span>By <a href="https://poly.google.com/view/dLHpzNdygsg" target="_blank">Poly</a></span>
       </span>
-      
-  
-    </section>
+      <a class="cc" href="https://creativecommons.org/licenses/by/2.0/" target="_blank">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+      </a>
+    </section>  -->
     
   </div>
   
-  
+  <!--
   <footer>
-   
-    <span>Click below for youtube videos ✌️</span>
-    <a href= "https://youtu.be/C2M1LUsWGsc">
-      <img src="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/logo.png?alt=media&token=605e5669-62a2-4e60-95af-e088dd41154d" alt="youtube button" aria-label="Open in youtube" height="33">
+    <span>This page is a basic demo of the <a href="https://github.com/GoogleWebComponents/model-viewer" target="_blank">&lt;model-viewer&gt;</a> web component.</span>
+    <span>It makes displaying 3D and AR content on the web easy ✌️</span>
+    <a href="https://glitch.com/edit/#!/remix/model-viewer">
+      <img src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726" alt="remix button" aria-label="remix" height="33">
     </a>
-  </footer>
+  </footer> -->
+  
+  
   
   
   <!-- 💁 Include both scripts below to support all browsers! -->
@@ -54,6 +73,9 @@
   <script type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
-   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  
+   <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  
 </body>
 </html>
