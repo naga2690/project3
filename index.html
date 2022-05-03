@@ -14,6 +14,31 @@
   </head> 
 <body>
   <div id="card">
+    
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDneVoaq0tIhgxoN4aHWQtNWdHufmLlNVE",
+    authDomain: "webar-testing-4a6f0.firebaseapp.com",
+    projectId: "webar-testing-4a6f0",
+    storageBucket: "webar-testing-4a6f0.appspot.com",
+    messagingSenderId: "281561993017",
+    appId: "1:281561993017:web:b5b72efc87f75594ec22e8",
+    measurementId: "G-8LVWQFFMJG"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+    
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
   <!--  <model-viewer src="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/162a6be2-293d-4554-8610-6011a9f71fef_ChairExp.glb?alt=media&token=a81b3e33-355c-4da5-92a0-4a7c4d9eeda7"
                   ios-src="https://firebasestorage.googleapis.com/v0/b/webar-testing-4a6f0.appspot.com/o/scene.usdz?alt=media&token=1743c314-941d-46d7-8cee-c266d1694e68"
